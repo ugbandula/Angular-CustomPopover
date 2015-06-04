@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+
+  <title> Custom popover Test </title>
+  <meta name="description" content="">
+  <meta name="author" content="Bandula Gamage">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Basic Styles -->
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--Custom Style Sheets-->
+  <link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body ng-controller="MainController">
+
+  <!-- MAIN PANEL -->
+  <div id="main" role="main">
+
+    <h3>Custom Popover Example</h3>
+
+    <p>The popover will appear on mouse over effect and will automatically disappear is mouseout event.</p>
+    <!-- MAIN CONTENT -->
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <a href="#" custom-popover="" content-type="contentType1" title="Custom Popover Example">
+          Example 1
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <a href="#" custom-popover="" content-type="contentType2" title="Custom Popover Example 2">
+          Example 2
+        </a>
+
+      </div>
+    </div>
+
+    <div>
+    <!--<div id="content" data-ng-view="" class="view-animate">-->
+      <br>
+    </div>
+    <!-- END MAIN CONTENT -->
+
+  </div>
+  <!-- END MAIN PANEL -->
+
+  <script type="text/ng-template" id="customPopoverContent1.html">
+    <div ng-controller="PopoverHoverController" id="popoverHoverContainer1">
+      <div>
+        {{message}}
+        <br><hr>
+        <p>The Popover plugin is similar to tooltips; it is a pop-up box that appears when the user clicks on an element.
+          The difference is that the popover can contain much more content.</p>
+        <br><hr>
+        This is an extension to Twitter Bootstrap popover with an Angular directive.
+      </div>
+    </div>
+  </script>
+
+  <script type="text/ng-template" id="customPopoverContent2.html">
+    <div id="popoverHoverContainer2">
+      <div>
+        <img ng-src="images/program2.jpg" class="popover-image">
+      </div>
+    </div>
+  </script>
+
+  <!--JQuery-->
+  <script src="scripts/libs/jquery-2.0.2.min.js"></script>
+
+  <!--Bootstrap script-->
+  <script src="scripts/bootstrap/bootstrap.min.js"></script>
+
+  <!-- AngularJS -->
+  <script src="scripts/libs/angular/angular.js"></script>
+  <script src="scripts/libs/angular/angular-route.js"></script>
+  <script src="scripts/libs/angular/angular-animate.js"></script>
+  <!--<script src="scripts/libs/angular/ui-bootstrap-custom-tpls-0.11.0.js"></script>-->
+  <!--<script src="scripts/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+
+  <!-- MAIN ANGULAR JS FILE -->
+  <script src="scripts/ng/ng.app.js"></script>
+  <script src="scripts/ng/ng.controllers.js"></script>
+  <script src="scripts/ng/ng.directives.js"></script>
+
+</body>
+
+</html>

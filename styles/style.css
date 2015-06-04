@@ -1,0 +1,16 @@
+/* Default Styles
+--------------------------------------------------------------------*/
+
+body {
+  font-family: 'Droid Sans', sans-serif;;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.popover-image {
+  width: 200px;
+  height: 200px;
+}
